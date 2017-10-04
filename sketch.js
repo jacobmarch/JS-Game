@@ -24,7 +24,8 @@ function mouseClicked() {
         team2Score -= 1;
     }
     if (team1Score == team2Score){
-        
+        team1Score + int(random(0,10);
+                         team2Score + int(random(0,10);
     }
   textSize(40);
   textAlign(CENTER);
