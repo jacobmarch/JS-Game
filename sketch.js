@@ -25,6 +25,18 @@ function mouseClicked() {
     if (team2Score == 1){
         team2Score -= 1;
     }
+    if (team1Score == 4){
+        team1Score -=1;
+    }
+    if (team2Score == 4){
+        team2Score -= 1;
+    }
+    if (team1Score == 2){
+        team1Score ++;
+    }
+    if (team2Score == 2){
+        team2Score ++;
+    }
     if (team1Score == team2Score){
         var team1Offense = int(random (15,60));
         var team1Defense = int(random (0, 15));
