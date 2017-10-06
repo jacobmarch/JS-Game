@@ -19,6 +19,8 @@ function mouseClicked() {
  var team2Defense = int(random (0, 15));
  var team2Score = team2Offense - team1Defense;
  var team1Score = team1Offense - team2Defense;
+ var team1Yards = int(team1Score/10) * team1Offense + 150;
+ var team2Yards = int(team2Score/10) * team2Offense + 150;
     if (team1Score == 1){
         team1Score -=1;
     }
@@ -67,13 +69,18 @@ function mouseClicked() {
         team2WinStreak ++;
         team1WinStreak = 0;
     }
-    text("Team 1 Wins: " + team1Wins, windowWidth/2, windowHeight/2 + 90);
-    text("Team 2 Wins: " + team2Wins, windowWidth/2, windowHeight/2 + 135);
-    
+    text("Team 1 Wins: " + team1Wins, windowWidth/2, windowHeight/2 + 135);
+    text("Team 2 Wins: " + team2Wins, windowWidth/2, windowHeight/2 + 180);
+    if (team1Yards > team2Yards){
+        text("Team 1 had " + team1Yards + " yards!", windowWidth/2, windowHeight/2 + 90);
+    }
+    if (team2Yards > team1Yards){
+        text("Team 2 had " + team2Yards + " yards!", windowWidth/2, windowHeight/2 + 90);
+    }
     if (team1WinStreak >= 3){
-        text("Team 1 has won " + team1WinStreak + " in a row!", windowWidth/2, windowHeight/2 + 180);
+        text("Team 1 has won " + team1WinStreak + " in a row!", windowWidth/2, windowHeight/2 + 270);
     }
     if (team2WinStreak >= 3){
-        text("Team 2 has won " + team2WinStreak + " in a row!", windowWidth/2, windowHeight/2 + 180);
+        text("Team 2 has won " + team2WinStreak + " in a row!", windowWidth/2, windowHeight/2 + 270);
     }
 }
