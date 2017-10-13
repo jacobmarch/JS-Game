@@ -111,7 +111,7 @@ function mouseClicked() {
         text("Team 2 has won " + team2WinStreak + " in a row!", windowWidth/2, windowHeight/2 + 270);
     }
     if (team1Score - team2Score <= 7 &&team1Score - team2Score > 0){
-       var name = int(random(1,3));
+       var name = int(random(1,4));
         var gameWinnerDistance = int(random(2,35));
         var gameWinnerTime = int(random(2,59));
         if (name == 1) {
@@ -120,10 +120,13 @@ function mouseClicked() {
         if(name == 2){
             text("Harold threw for the game-winning touchdown from " + gameWinnerDistance + " yards away with " + gameWinnerTime + " seconds left!", windowWidth/2, windowHeight/2 - 90);
         }
+        if (name == 3) {
+        text("Mr. Dickie intercepted a pass at the goal line to preserve the lead with "  + gameWinnerTime + " seconds left!", windowWidth/2, windowHeight/2 - 90);
+    }
         
     }
         if (team2Score - team1Score <= 7 &&team2Score - team1Score > 0){
-       var name = int(random(1,3));
+       var name = int(random(1,4));
         var gameWinnerDistance = int(random(2,35));
         var gameWinnerTime = int(random(2,59));
             if (name == 1) {
@@ -132,6 +135,9 @@ function mouseClicked() {
             if (name == 2){
                 text("Jacob threw for the game-winning touchdown from " + gameWinnerDistance + " yards away with " + gameWinnerTime + " seconds left!", windowWidth/2, windowHeight/2 - 90);
             }
+            if (name == 3) {
+        text("Jackson intercepted a pass at the goal line to preserve the lead with "  + gameWinnerTime + " seconds left!", windowWidth/2, windowHeight/2 - 90);
+    }
 }
     }
 
